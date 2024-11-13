@@ -13,11 +13,11 @@
     <h1>Site ecommerce</h1>
 
 
-    <?php if ($message)  { ?>
+    {% if (message)  %}
 
-        <h2><?php echo $message; ?></h2>
+    {{  message }}
 
-    <?php } ?>
+    {%  endif %}
 
 
     <form method="POST">
@@ -28,7 +28,6 @@
         <button type="submit">Créer une commande</button>
 
     </form>
-
 
 
 </main>

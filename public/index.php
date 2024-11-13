@@ -4,6 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+
+require_once ('../config/config.php');
 require_once('../controller/OrderController.php');
 require_once('../controller/ErrorController.php');
 
@@ -31,7 +33,10 @@ $endUri = trim($endUri, "/");
  } else if ($endUri === "shipping-address") { //url pour accéder à la page de shipping-address
      $orderController = new OrderController();
      $orderController->setShippingAddress();
- } else {
+ } else if($endUri === "payment") {
+     $orderController = new OrderController();
+     $orderController->pay();
+ } else{
     $errorController = new ErrorController();
     $errorController->notFound();
 }
