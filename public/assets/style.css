@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: royalblue;
+    height: 30vh;
+    position: relative;
+}
+
+nav{
+    background-color: cornflowerblue;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    font-size: 30px;
+}
